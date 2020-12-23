@@ -1,0 +1,236 @@
+.r-link{
+    display: var(--rLinkDisplay, inline-flex) !important;
+  }
+  
+  .r-link[href]{
+    color: var(--rLinkColor) !important;
+    text-decoration: var(--rLinkTextDecoration, none) !important;
+  }
+  
+  
+  .r-list{
+    padding-left: var(--rListPaddingLeft, 0) !important;
+    margin-top: var(--rListMarginTop, 0) !important;
+    margin-bottom: var(--rListMarginBottom, 0) !important;
+    list-style: var(--rListListStyle, none) !important;
+  }
+  
+  .menu{
+    --rLinkColor: var(--menuLinkColor, currentColor);
+  }
+  
+  .menu__link{
+    display: var(--menuLinkDisplay, block);
+  }
+  
+  
+  
+  .menu__link:focus{
+    outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+    outline-offset: var(--menuLinkOutlineOffset);
+  }
+  
+  
+  
+  .menu:hover .menu__link:not(:hover){
+    --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+  }
+  
+  
+  
+  .menu{
+    background-color: var(--menuBackgroundColor, #f0f0f0);
+    box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+  }
+  
+  .menu__list{
+    display: flex;  
+  }
+  
+  .menu__link{
+    padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  .text-underlined{
+    position: relative;
+    overflow: hidden;
+  
+    will-change: color;
+    transition: color .25s ease-out;  
+  }
+  
+  .text-underlined::before, 
+  .text-underlined::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--textUnderlinedLineColor, currentColor);
+  
+    will-change: width;
+    transition: width .1s ease-out;
+  
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .text-underlined::before{
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+  
+  .text-underlined::after{
+    right: 50%;
+    transform: translateX(50%); 
+  }
+  
+  .text-underlined:hover::before, 
+  .text-underlined:hover::after{
+    width: 100%;
+    transition-duration: .2s;
+  }
+  
+  
+  .page__custom-settings{
+    --menuBackgroundColor: #6c5ce7;
+    --menuLinkColor: #fff;
+    --menuLinkColorUnactive: #241c69;
+    --menuLinkOutlineOffset: -.5rem; 
+  }
+  
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    margin: 0;
+    min-height: 10vh;
+    display: flex;  
+    flex-direction: column;
+  }
+  
+  .page{
+    box-sizing: border-box;
+    max-width: 2000px;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    margin: auto;
+  }
+  
+  .page__menu:nth-child(n+2){
+    margin-top: 3rem;
+  }
+  
+  #loginl {
+    background-color:rgb(63, 103, 189) !important;
+  }
+  
+  #registerl {
+    background-color: rgb(131, 54, 54) !important;
+  }
+
+  ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    display: block;
+    position: relative;
+    float: left;
+    background: #a76d7b;
+  }
+  /* This hides the dropdowns */
+  li ul {
+    display: none;
+  }
+  ul li a {
+    display: block;
+    padding: 0.58em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    border-top: 0.01px solid rgb(0, 0, 0);
+  }
+  ul li a:hover {
+    background: #8b6342;
+  }
+ 
+ 
+
+  /* Display the dropdown */
+  li:hover > ul {
+    display: block; 
+    position: absolute;
+  }
+  /* Remove float from dropdown lists */
+  li:hover li {
+      float: none;
+  }
+  li:hover a {
+    background-color: #8962b4;
+  }
+  li:hover li a:hover {
+    background-color: #34929e;
+  }
+  .main-navigation li ul li {
+    border-top: 0;
+  }
+  /* Displays second level dropdowns to the right of the first level dropdown */
+  ul ul ul {
+    left: 100%;
+    top: 0; 
+  }
+
+  .dropdown-menu {
+    background-color: #8962b4;
+    margin-top: -0.1%;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    position: absolute;
+   /* margin-left: -0.2%;*/
+    width: 100%;
+    margin-right: -1%;
+  }
+
+  .log {
+    border-top: 0.5px solid rgb(0, 0, 0);
+  }
+
+  .dropdown-item {
+    background-color: none;
+    width: 100%;
+  }
+
+  .dropdown-item a {
+    background-color: none;
+    width: 100%;
+  }
+  
+  /* Simple clearfix */
+  
+  ul:before,
+  ul:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+  
+  ul:after {
+      clear: both;
+  }
+
+  .inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
